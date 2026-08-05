@@ -7,8 +7,11 @@ setup(
     author="Your Name",
     packages=find_packages(),
     python_requires=">=3.8",
-    install_requires=[],
+    install_requires=[
+        "tomli>=1.2.0;python_version<'3.11'",
+    ],
     extras_require={
-        "dev": ["pytest>=7.0", "black", "flake8"],
+        "yaml": ["pyyaml>=6.0"],
+        "dev": ["pytest>=7.0", "black", "flake8", "pyyaml>=6.0"],
     },
 )
